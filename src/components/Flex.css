@@ -1,0 +1,94 @@
+.sliderLabel_General{
+    min-width : 3.5em;
+    max-width : 3.5em;
+    text-align: center;
+}
+
+.VertFlexContainer_General{
+    display:flex;
+    flex-direction : column;
+    height : 100%;
+    width : 100%;
+    min-width : 100%;
+
+    overflow:auto;
+}
+
+.TextProperties_subflex{
+    height : 50%;
+    max-width : 100%;
+    width : 100%;
+
+    overflow:auto;
+}
+
+.TextProperties_subflex > div{
+    margin : 2px;
+}
+
+.TextShadowProperties_subflex{
+    height : 50%;
+    display: flex;
+    width : 100%;
+    min-width: 100%;
+}
+
+.TextShadowProperties_subflex > div{
+    height : 100%;
+    width : 30%;
+    max-width : 35%;
+    min-width : 30%;
+}
+
+.TextShadowProperties_subflex > div > div{
+    display: flex;
+}
+
+.HorFlexContainer_General{
+    display:flex;
+    width : 100%;
+    min-height : 100%;
+    height: 100%;
+}
+
+.VertFlexContainerLeft{
+    position:fixed;
+    min-height : 100%;
+    max-height : 100%;
+    margin : 0 0 0 0;
+    width : 35%;
+    max-width : 35%;
+    display:flex;
+    flex-direction: column; 
+}
+
+.VertFlexContainerRight{
+    position:relative;
+    height:100vh;
+    top:0;
+    left:0;
+    overflow-x:hidden;
+    overflow-y:auto;
+    width : 65%;
+    max-width : 65%;
+    display:flex;
+    flex-direction: column; 
+}
+
+.ButtonPreviewContainer{
+    min-height : 30%;
+    max-height : 30%;
+    overflow : auto;
+}
+
+
+.CSSPropertyContainer{
+    min-height : 10%;
+    max-height : 10%;
+}
+
+
+.CSSCodeContainer{
+    min-height : 60%;
+    max-height : 60%;
+}
