@@ -4,10 +4,6 @@ import ButtonProperties from '../Types/All';
 import './BaseStyle.css';
 
 class TextForm extends React.Component<{onInputChanged : Function, buttonProperties : ButtonProperties }>{
-    componentDidMount(){
-        console.log("from the text form", this.props.buttonProperties);
-    }
-
     toggleFlag(  flag : number ){
         if(flag === 0){return 1}
         else return 0;

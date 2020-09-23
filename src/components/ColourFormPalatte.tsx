@@ -13,75 +13,75 @@ class ColourFormPalatte extends React.Component<{onInputChanged : Function, butt
                 <div className="ColorPalatte FlexRow">
                     <React.Fragment>
                             <ColorPanel
-                                isDisabled={this.props.buttonProperties.previewCheckered}
+                                isDisabled={properties.buttonProperties.previewCheckered}
                                 tooltipText={" Preview Canvas Background Color "}
                                 freezeTooltip={this.state.freezeTooltip}
                                 stateKey={"previewBGColor"}
-                                onInputChanged={this.props.onInputChanged}
-                                currentValue={this.props.buttonProperties.previewBGColor}>
+                                onInputChanged={properties.onInputChanged}
+                                currentValue={properties.buttonProperties.previewBGColor}>
                             </ColorPanel>
                             <ColorPanel
                                 isDisabled={false}
                                 tooltipText={" Font Color "}
                                 freezeTooltip={this.state.freezeTooltip}
                                 stateKey={"fontColor"}
-                                onInputChanged={this.props.onInputChanged}
-                                currentValue={this.props.buttonProperties.fontColor}>
+                                onInputChanged={properties.onInputChanged}
+                                currentValue={properties.buttonProperties.fontColor}>
                             </ColorPanel>
                             <ColorPanel
                                 isDisabled={false}
                                 tooltipText={" Text's Shadow Color "}
                                 freezeTooltip={this.state.freezeTooltip}
                                 stateKey={"textShadowColor"}
-                                onInputChanged={this.props.onInputChanged}
-                                currentValue={this.props.buttonProperties.textShadowColor}>
+                                onInputChanged={properties.onInputChanged}
+                                currentValue={properties.buttonProperties.textShadowColor}>
                             </ColorPanel>
                             <ColorPanel
-                                isDisabled={this.props.buttonProperties.isTransparent || (!this.props.buttonProperties.hasGradient)}
+                                isDisabled={properties.buttonProperties.isTransparent || (!properties.buttonProperties.hasGradient)}
                                 tooltipText={" Box's Gradient Top Color "}
                                 freezeTooltip={this.state.freezeTooltip}
                                 stateKey={"gradientTopColor"}
-                                onInputChanged={this.props.onInputChanged}
-                                currentValue={this.props.buttonProperties.gradientTopColor}>
+                                onInputChanged={properties.onInputChanged}
+                                currentValue={properties.buttonProperties.gradientTopColor}>
                             </ColorPanel>
                             <ColorPanel
-                                isDisabled={this.props.buttonProperties.isTransparent}
-                                tooltipText={`${this.props.buttonProperties.hasGradient ? "Box's Gradient Bottom Color" : "Box's Background Color"}`}
+                                isDisabled={properties.buttonProperties.isTransparent}
+                                tooltipText={`${properties.buttonProperties.hasGradient ? "Box's Gradient Bottom Color" : "Box's Background Color"}`}
                                 stateKey={"gradientBtmColor"}
                                 freezeTooltip={this.state.freezeTooltip}
-                                onInputChanged={this.props.onInputChanged}
-                                currentValue={this.props.buttonProperties.gradientBtmColor}>
+                                onInputChanged={properties.onInputChanged}
+                                currentValue={properties.buttonProperties.gradientBtmColor}>
                             </ColorPanel>
                             <ColorPanel
                                 isDisabled={false}
                                 tooltipText={" Box's Shadow Color "}
                                 stateKey={"boxShadowColor"}
                                 freezeTooltip={this.state.freezeTooltip}
-                                onInputChanged={this.props.onInputChanged}
-                                currentValue={this.props.buttonProperties.boxShadowColor}>
+                                onInputChanged={properties.onInputChanged}
+                                currentValue={properties.buttonProperties.boxShadowColor}>
                             </ColorPanel>
                             <ColorPanel
                                 isDisabled={false}
                                 tooltipText={" Box's Border Color "}
                                 stateKey={"borderColor"}
                                 freezeTooltip={this.state.freezeTooltip}
-                                onInputChanged={this.props.onInputChanged}
-                                currentValue={this.props.buttonProperties.borderColor}>
+                                onInputChanged={properties.onInputChanged}
+                                currentValue={properties.buttonProperties.borderColor}>
                             </ColorPanel>
                     </React.Fragment>  
                 </div>
                 <div className="ui ColorProperties FlexRow" >
                     <div className="ColorPropertyTray FlexColumn" style={{ margin : "0 0 0 0"}}>
                         <div>
-                            <input type="checkbox" onChange={(e) => {this.props.onInputChanged( {isTransparent : e.target.checked} )}} checked={this.props.buttonProperties.isTransparent}></input>
+                            <input type="checkbox" onChange={(e) => {properties.onInputChanged( {isTransparent : e.target.checked} )}} checked={properties.buttonProperties.isTransparent}></input>
                             <label > Use Transparent Button </label>
                         </div>
                         <div>
-                            <input type="checkbox" onChange={(e) => {this.props.onInputChanged( {hasGradient : e.target.checked} )}} checked={this.props.buttonProperties.hasGradient}></input>
+                            <input type="checkbox" onChange={(e) => {properties.onInputChanged( {hasGradient : e.target.checked} )}} checked={properties.buttonProperties.hasGradient}></input>
                             <label > Use Gradient </label>
                         </div>
                         <div>
-                            <input type="checkbox" onChange={(e) => {this.props.onInputChanged( {previewCheckered : e.target.checked} )}} checked={this.props.buttonProperties.previewCheckered}></input>
+                            <input type="checkbox" onChange={(e) => {properties.onInputChanged( {previewCheckered : e.target.checked} )}} checked={properties.buttonProperties.previewCheckered}></input>
                             <label > Preview Checkered </label>
                         </div>
                     </div>

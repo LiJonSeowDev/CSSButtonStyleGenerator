@@ -5,12 +5,6 @@ import './BaseStyle.css'
 
 class ButtonPreview extends React.Component< {buttonProperties : ButtonProperties} >{
     state = { mouseHovered : 0};
-    componentDidMount(){
-        console.log(this.state);
-        //console.log("from the Button Preview ", this.props.buttonProperties)
-
-    }
-
     renderButtonStyle(){
         const properties = this.props.buttonProperties;
 

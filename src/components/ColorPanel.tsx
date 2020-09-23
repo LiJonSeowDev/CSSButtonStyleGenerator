@@ -1,5 +1,4 @@
 import React from 'react';
-import ButtonProperties from '../Types/All';
 
 class ColorPanel extends React.Component<{ 
     isDisabled : boolean
@@ -26,9 +25,7 @@ class ColorPanel extends React.Component<{
                 </div>
             )
         }
-    }
-    
-        
+    }        
 
     render(){
         const properties = this.props;

@@ -9,7 +9,7 @@ class RangeSlider extends React.Component<{
     onInputChanged : Function
     }>{
     
-    state = { sliderInput : '' , isValid : this.verifyInput(this.props.currentValue) }
+    state = { sliderInput : '' , isValid : true }
     textBoxRef = React.createRef<HTMLInputElement>(); // like this
 
     componentDidMount(){
