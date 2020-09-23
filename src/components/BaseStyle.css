@@ -214,6 +214,21 @@ visibility: visible;
     padding : 0px 0px 0px 0px;
 }
 
+.PalattePanel{
+    height : 100%;
+    max-height : 100%;
+}
+
+.PalatteColorPanel{
+    height : 100%;
+    max-height : 100%;
+}
+
+.FrozenLabel{
+    min-height : 35%;
+    height : 35%;
+    max-height : 35%;
+}
 
 
 
