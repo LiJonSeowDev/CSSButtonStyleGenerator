@@ -92,6 +92,9 @@ class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties 
                             <i className= {`${this.state.clipBoardIcon} big icon`}></i>
                         </button>
                 </div>
+                <div>
+                    <h4> Report bugs to li.jon.seow.dev@gmail.com </h4>
+                </div>
             </div>
             <div className="CSSCodeBlock" id='codeBlock'>
                 <SyntaxHighlighter language="css" PreTag='pre' style={railscasts} customStyle={{ borderRadius : "8px" , overflow : "visible" ,fontSize : "16px" , minWidth : "100%"}}>
