@@ -42,7 +42,7 @@ class TextForm extends React.Component<{onInputChanged : Function, buttonPropert
                     sliderMax={48} 
                     onInputChanged={this.props.onInputChanged} 
                     currentValue={this.props.buttonProperties.textFontSize}
-                    stateKey={'testFontSize'}>
+                    stateKey={'textFontSize'}>
                 </RangeSlider>
                 <RangeSlider
                     sliderTitle={" Text Shadow V-Pos "} 

@@ -21,7 +21,7 @@ class ShapeForm extends React.Component<{onInputChanged : Function, buttonProper
                             sliderMax={162} 
                             onInputChanged={this.props.onInputChanged} 
                             currentValue={this.props.buttonProperties.boxHeight}
-                            stateKey={'boxWidth'}>
+                            stateKey={'boxHeight'}>
                         </RangeSlider>
                         <RangeSlider
                             sliderTitle={" Box Border Radius "} 
@@ -29,7 +29,7 @@ class ShapeForm extends React.Component<{onInputChanged : Function, buttonProper
                             sliderMax={42} 
                             onInputChanged={this.props.onInputChanged} 
                             currentValue={this.props.buttonProperties.boxBorderRadius}    
-                            stateKey={'boxWidth'} >
+                            stateKey={'boxBorderRadius'} >
                         </RangeSlider>
                         <RangeSlider
                             sliderTitle={" Box Border Thickness "} 
@@ -37,7 +37,7 @@ class ShapeForm extends React.Component<{onInputChanged : Function, buttonProper
                             sliderMax={12} 
                             onInputChanged={this.props.onInputChanged} 
                             currentValue={this.props.buttonProperties.boxBorderSize} 
-                            stateKey={'boxWidth'}>
+                            stateKey={'boxBorderSize'}>
                         </RangeSlider>
                         <RangeSlider
                             sliderTitle={" Box Shadow V-Pos "} 
@@ -45,7 +45,7 @@ class ShapeForm extends React.Component<{onInputChanged : Function, buttonProper
                             sliderMax={50} 
                             onInputChanged={this.props.onInputChanged} 
                             currentValue={this.props.buttonProperties.boxShadowVertPos}    
-                            stateKey={'boxWidth'}>
+                            stateKey={'boxShadowVertPos'}>
                         </RangeSlider>
                         <RangeSlider
                             sliderTitle={" Box Shadow H-Pos "} 
@@ -53,7 +53,7 @@ class ShapeForm extends React.Component<{onInputChanged : Function, buttonProper
                             sliderMax={50} 
                             onInputChanged={this.props.onInputChanged} 
                             currentValue={this.props.buttonProperties.boxShadowHorPos}     
-                            stateKey={'boxWidth'}>
+                            stateKey={'boxShadowHorPos'}>
                         </RangeSlider>
                         <RangeSlider
                             sliderTitle={" Box Shadow Blur "} 
@@ -61,7 +61,7 @@ class ShapeForm extends React.Component<{onInputChanged : Function, buttonProper
                             sliderMax={50} 
                             onInputChanged={this.props.onInputChanged} 
                             currentValue={this.props.buttonProperties.boxShadowBlurR} 
-                            stateKey={'boxWidth'}>
+                            stateKey={'boxShadowBlurR'}>
                         </RangeSlider>
                         <RangeSlider
                             sliderTitle={" Box Shadow Spread "} 
@@ -69,7 +69,7 @@ class ShapeForm extends React.Component<{onInputChanged : Function, buttonProper
                             sliderMax={50} 
                             onInputChanged={this.props.onInputChanged} 
                             currentValue={this.props.buttonProperties.boxShadowSpreadR}   
-                            stateKey={'boxWidth'} >
+                            stateKey={'boxShadowSpreadR'} >
                         </RangeSlider>
                         <div className="InputRangedProperty FlexRow" style={{margin : "0.25em"}}>
                             <div className="InputRangedPropertyTitle"><label> Inset Shadow </label></div>

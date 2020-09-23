@@ -48,17 +48,8 @@ class App extends React.Component {
     previewCheckered : false
     
   };
-
-  updateState( object : Object){
-
-    const timeOutID = setTimeout(
-      ()=>{
-
-      },
-      2000)
-
-
-    this.setState(object)
+  componentDidUpdate(){
+    console.log("App is updating");
   }
 
   render(){

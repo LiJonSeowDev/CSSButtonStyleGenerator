@@ -6,7 +6,6 @@ import './BaseStyle.css';
 
 
 class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties , onInputChanged : Function} >{
-    private codeBlockRef = React.createRef<HTMLInputElement>(); // like this
     state = { clipBoardIcon : 'copy blue' , timerID : -1};
 
     componentDidMount(){
@@ -104,7 +103,7 @@ class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties 
                         </button>
                 </div>
             </div>
-            <div className="CSSCodeBlock" id='codeBlock' ref={this.codeBlockRef}>
+            <div className="CSSCodeBlock" id='codeBlock'>
                 <SyntaxHighlighter language="css" PreTag='pre' style={railscasts} customStyle={{ borderRadius : "8px" , overflow : "visible" ,fontSize : "16px" , minWidth : "100%"}}>
                     {this.renderCSS()}
                 </SyntaxHighlighter>

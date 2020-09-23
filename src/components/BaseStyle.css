@@ -1,4 +1,9 @@
 /* Generics */
+.ZeroSpace{
+    padding : 0 0 0 0;
+    margin : 0 0 0 0;
+}
+
 .FlexRow{
     display:flex;
     flex-direction : row;
@@ -58,8 +63,6 @@
 .InputRangedPropertySliders > div{
     display: flex;
 }
-
-
 
 .tooltip {
     position: relative;
