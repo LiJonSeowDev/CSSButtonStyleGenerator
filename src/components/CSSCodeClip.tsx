@@ -71,7 +71,7 @@ class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties 
         navigator.clipboard.writeText(this.renderCSS());
 
 
-        // Sort of Debouncing the icon class
+        // Some Kind of ... "throttling" for the icon class
         if (this.state.clipBoardIcon === 'check green IconFader'){
             clearTimeout( this.state.timerID );
         }

@@ -30,7 +30,6 @@ class ColorPanel extends React.Component<{
 
     handleOnColorChange = throttle(
         (value)=> {
-            console.log("okay time to invoke setState");
             this.props.onInputChanged( {[this.props.stateKey] : value} )} 
         , 120
     )
