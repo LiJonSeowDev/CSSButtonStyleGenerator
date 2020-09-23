@@ -48,9 +48,6 @@ class App extends React.Component {
     previewCheckered : false
     
   };
-  componentDidUpdate(){
-    console.log("App is updating");
-  }
 
   render(){
     return (

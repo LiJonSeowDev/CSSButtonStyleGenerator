@@ -14,15 +14,6 @@ class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties 
         
     }
 
-    componentDidUpdate(){
-       console.log("rerendering code Block") 
-       console.log(this.state.clipBoardIcon);
-        // Seems computationally expensive, we may have to flip it to some transition or smth or just go with no colour
-
-
-    }
-
-
     renderCSS(){
         const properties = this.props.buttonProperties;
         const computeBGStyle = ( isHover : boolean) => {
