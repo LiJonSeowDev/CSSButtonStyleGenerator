@@ -1,4 +1,5 @@
 import React from 'react';
+import {throttle} from 'lodash';
 
 class ColorPanel extends React.Component<{ 
     isDisabled : boolean
@@ -25,7 +26,14 @@ class ColorPanel extends React.Component<{
                 </div>
             )
         }
-    }        
+    }
+
+    handleOnColorChange = throttle(
+        (value)=> {
+            console.log("okay time to invoke setState");
+            this.props.onInputChanged( {[this.props.stateKey] : value} )} 
+        , 120
+    )
 
     render(){
         const properties = this.props;
@@ -38,7 +46,7 @@ class ColorPanel extends React.Component<{
                     <div className="FlexColumn PalattePanel">
                         <div className="PalatteColorPanel">
                             {this.renderHoverTooltip()}
-                            <input className="PalatteColor" disabled={properties.isDisabled} type="color" onChange={(e) => {this.props.onInputChanged( {[properties.stateKey] : e.target.value} )}} value={properties.currentValue}></input>
+                            <input className="PalatteColor" disabled={properties.isDisabled} type="color" onChange={(e) => {this.handleOnColorChange(e.target.value)}} value={properties.currentValue}></input>
                         </div>
                         {this.renderFrozenTooltip()}
                     </div>

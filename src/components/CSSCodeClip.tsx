@@ -68,7 +68,6 @@ class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties 
     }
 
     copyCSS(){
-        console.log("copy clicked");
         navigator.clipboard.writeText(this.renderCSS());
 
 
