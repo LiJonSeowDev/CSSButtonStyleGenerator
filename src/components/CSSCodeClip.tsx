@@ -2,18 +2,22 @@ import React from 'react';
 import ButtonProperties from '../Types/All';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { railscasts } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import './CSSCodeClip.css';
+import './BaseStyle.css';
 
 
 class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties , onInputChanged : Function} >{
-    private codeBlockRef = React.createRef<HTMLPreElement>(); // like this
-    state = {cssCode : this.renderCSS()}
+    private codeBlockRef = React.createRef<HTMLInputElement>(); // like this
+    state = { clipBoardIcon : 'copy blue' , timerID : -1};
 
     componentDidMount(){
+
+
+        
     }
 
     componentDidUpdate(){
-
+       console.log("rerendering code Block") 
+       console.log(this.state.clipBoardIcon);
         // Seems computationally expensive, we may have to flip it to some transition or smth or just go with no colour
 
 
@@ -73,39 +77,34 @@ class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties 
         return CSSCode;
     }
 
-    dispatchCopyClipboardEvent(){
-        var event = new CustomEvent('copy', { "detail": "Example of an event" });
-        console.log("dispatching event");
-        // Dispatch/Trigger/Fire the event
-        document.dispatchEvent(event);
+    copyCSS(){
+        console.log("copy clicked");
+        navigator.clipboard.writeText(this.renderCSS());
+
+
+        // Sort of Debouncing the icon class
+        if (this.state.clipBoardIcon === 'check green IconFader'){
+            clearTimeout( this.state.timerID );
+        }
+        this.setState({clipBoardIcon: 'check green IconFader'})
+        var timeoutID = setTimeout( ()=>{
+            this.setState({clipBoardIcon : 'copy blue IconFader'})
+        }, 500);
+        this.setState({timerID : timeoutID});
     }
-
-
-
-    /*
-    
-<pre id="CSS_CodeBlock" ref={this.codeBlockRef} className="CSSCodeClip_pre">
-                            <span className="CSSCodeClip_pre">
-                                <code className="css CSSCodeClip_codeBlock">
-                                {this.renderCSS()}
-                                </code>
-                            </span>
-                    </pre>
-
-    */
     render(){
         return(
         <React.Fragment>
-            <div className="ui segment FlexColumn form CSSPropertyBlock" style={{margin : "0 0 0 0"}}>
-                <div className="ui action labeled input" style={{maxWidth : "50%"}}>
+            <div className="ui FlexColumn form CSSPropertyBlock" style={{margin : "0 0 0 0"}}>
+                <div className="ui action mini labeled input" style={{maxWidth : "50%"}}>
                         <div className="ui label"> Button Text </div>
                         <input placeholder="Button's CSS Class" type="text" onChange={ (e) => { this.props.onInputChanged( {buttonClassName : e.target.value})}} value={this.props.buttonProperties.buttonClassName}></input>
-                        <button onClick={(e) => { console.log("copy clicked")}}>
-                            <i className={`${this.props.buttonProperties.textBold ? 'inverted white' : ''} copy icon`}></i>
+                        <button onClick={(e) => { this.copyCSS()}}>
+                            <i className= {`${this.state.clipBoardIcon} big icon`}></i>
                         </button>
                 </div>
             </div>
-            <div className="CSSCodeBlock">
+            <div className="CSSCodeBlock" id='codeBlock' ref={this.codeBlockRef}>
                 <SyntaxHighlighter language="css" PreTag='pre' style={railscasts} customStyle={{ borderRadius : "8px" , overflow : "visible" ,fontSize : "16px" , minWidth : "100%"}}>
                     {this.renderCSS()}
                 </SyntaxHighlighter>
@@ -116,23 +115,3 @@ class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties 
 }
 
 export default CSSCodeClip;
-/*
-*
-*
-            <div className="ui segment VertFlexContainer_General" style ={{overflow : "hidden"}}>
-                <div className="CSSCodeTitle">
-                    <h2>CSS Code</h2>
-                </div>
-                <div className="CSSCodeTitle">
-                    <button className="ui button" onClick={(e) => {this.dispatchCopyClipboardEvent(); }}>
-                        <label className="ui label"> COPY </label>
-                        <i style={{ margin : '2px'}} className="copy icon"></i>
-                    </button>
-                </div>
-                <div className="CSSCodeSegment" style={{backgroundColor : "#232323"}}>
-                        <SyntaxHighlighter language="css" PreTag='pre' style={railscasts} customStyle={{ borderRadius : "8px" , overflow : "visible" ,fontSize : "12px" , minWidth : "100%"}}>
-                            {this.renderCSS()}
-                        </SyntaxHighlighter>
-                </div>
-            </div>
-*/

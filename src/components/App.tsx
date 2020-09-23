@@ -2,11 +2,11 @@ import React from 'react';
 import ButtonPreview from './ButtonPreview';
 import ButtonProperties from '../Types/All';
 import CSSCodeClip from './CSSCodeClip';
-import './Flex.css';
-import './Test.css';
 import ColourFormPalatte from './ColourFormPalatte';
 import TextForm from './TextForm';
 import ShapeForm from './ShapeForm';
+
+import './BaseStyle.css';
 
 class App extends React.Component {
   state : ButtonProperties = {
@@ -50,6 +50,14 @@ class App extends React.Component {
   };
 
   updateState( object : Object){
+
+    const timeOutID = setTimeout(
+      ()=>{
+
+      },
+      2000)
+
+
     this.setState(object)
   }
 

@@ -1,97 +1,64 @@
 import React from 'react';
-import './Palatte.css';
-import './Test.css'
+import ColorPanel from './ColorPanel';
+import './BaseStyle.css';
 import ButtonProperties from '../Types/All';
 
-
-
 class ColourFormPalatte extends React.Component<{onInputChanged : Function, buttonProperties : ButtonProperties}> {
-    /*calcActivePalattes(){
-        let base = 7;
-        if ( this.props.buttonProperties.isTransparent ) { base - 2}
-        else if ( this.props.buttonProperties.hasGradient ) { base - 1}
-
-        return base;
-    }*/
-    renderPreviewBGInput(){
-        if(false){return;}
-        return (
-        <React.Fragment>
-            <div className="PalatteTray tooltip">
-                <span className="tooltiptext"> Preview's Background Colour </span>
-                <input className="PalatteColor" type="color" onChange={(e) => {this.props.onInputChanged( {previewBGColor : e.target.value} )}} value={this.props.buttonProperties.previewBGColor}></input>
-            </div>
-        </React.Fragment>
-        )
-
-        
-    }
-
-    renderBGInputs(){
-        let topGradientColor = (
-        <React.Fragment>
-            <div className="PalatteTray tooltip">
-                <span className="tooltiptext"> Box's Gradient Top Color </span>
-                <input className="PalatteColor" disabled={this.props.buttonProperties.isTransparent} type="color" onChange={(e) => {this.props.onInputChanged( {gradientTopColor : e.target.value} )}} value={this.props.buttonProperties.gradientTopColor}></input>
-                <div></div>
-            </div>
-        </React.Fragment>
-        )
-
-        let btmGradientColor = (
-        <React.Fragment>
-            <div className="PalatteTray tooltip">
-                <span className="tooltiptext"> Box's Gradient Bottom Color </span>
-                <input className="PalatteColor" disabled={this.props.buttonProperties.isTransparent} type="color" onChange={(e) => {this.props.onInputChanged( {gradientBtmColor : e.target.value} )}} value={this.props.buttonProperties.gradientBtmColor}></input>
-            </div>
-        </React.Fragment>
-        )
-        
-
-        if (this.props.buttonProperties.isTransparent){
-            return null
-        }
-        else if  (this.props.buttonProperties.hasGradient){
-            return (
-                <React.Fragment>
-                    {topGradientColor}
-                    {btmGradientColor}
-                </React.Fragment>
-            )
-        }
-        else{
-            return(
-                <React.Fragment>
-                    {btmGradientColor}
-                </React.Fragment>
-            )
-        } 
-    }
-
     render(){
+        const properties = this.props;
         return (
             <React.Fragment>
                 <div className="ColorPalatte FlexRow">
                     <React.Fragment>
-                            {this.renderPreviewBGInput()}
-                            <div className="PalatteTray tooltip">
-                                <span className="tooltiptext"> Font Color </span>
-                                <input className="PalatteColor" type="color" onChange={(e) => {this.props.onInputChanged( {fontColor : e.target.value} )}} value={this.props.buttonProperties.fontColor}></input>
-                            </div>
-                            <div className="PalatteTray tooltip">
-                                <span className="tooltiptext"> Text's Shadow Color </span>
-                                <input className="PalatteColor" type="color" onChange={(e) => {this.props.onInputChanged( {textShadowColor : e.target.value} )}} value={this.props.buttonProperties.textShadowColor}></input>
-                            </div>
-                            {this.renderBGInputs()}               
-                            <div className="PalatteTray tooltip">
-                                <span className="tooltiptext"> Box's Shadow Color </span>
-                                <input className="PalatteColor" type="color" onChange={(e) => {this.props.onInputChanged( {boxShadowColor : e.target.value} )}} value={this.props.buttonProperties.boxShadowColor}></input>
-                            </div>
-
-                            <div className="PalatteTray tooltip">
-                                <span className="tooltiptext"> Box's Border Color </span>
-                                <input className="PalatteColor" type="color" onChange={(e) => {this.props.onInputChanged( {borderColor : e.target.value} )}} value={this.props.buttonProperties.borderColor}></input>
-                            </div>
+                            <ColorPanel
+                                isDisabled={this.props.buttonProperties.previewCheckered}
+                                tooltipText={" Preview Canvas Background Color "}
+                                stateKey={"previewBGColor"}
+                                onInputChanged={this.props.onInputChanged}
+                                currentValue={this.props.buttonProperties.previewBGColor}>
+                            </ColorPanel>
+                            <ColorPanel
+                                isDisabled={false}
+                                tooltipText={" Font Color "}
+                                stateKey={"fontColor"}
+                                onInputChanged={this.props.onInputChanged}
+                                currentValue={this.props.buttonProperties.fontColor}>
+                            </ColorPanel>
+                            <ColorPanel
+                                isDisabled={false}
+                                tooltipText={" Text's Shadow Color "}
+                                stateKey={"textShadowColor"}
+                                onInputChanged={this.props.onInputChanged}
+                                currentValue={this.props.buttonProperties.textShadowColor}>
+                            </ColorPanel>
+                            <ColorPanel
+                                isDisabled={this.props.buttonProperties.isTransparent || (!this.props.buttonProperties.hasGradient)}
+                                tooltipText={" Box's Gradient Top Color "}
+                                stateKey={"gradientTopColor"}
+                                onInputChanged={this.props.onInputChanged}
+                                currentValue={this.props.buttonProperties.gradientTopColor}>
+                            </ColorPanel>
+                            <ColorPanel
+                                isDisabled={this.props.buttonProperties.isTransparent}
+                                tooltipText={`${this.props.buttonProperties.hasGradient ? "Box's Gradient Bottom Color" : "Box's Background Color"}`}
+                                stateKey={"gradientBtmColor"}
+                                onInputChanged={this.props.onInputChanged}
+                                currentValue={this.props.buttonProperties.gradientBtmColor}>
+                            </ColorPanel>
+                            <ColorPanel
+                                isDisabled={false}
+                                tooltipText={" Box's Shadow Color "}
+                                stateKey={"boxShadowColor"}
+                                onInputChanged={this.props.onInputChanged}
+                                currentValue={this.props.buttonProperties.boxShadowColor}>
+                            </ColorPanel>
+                            <ColorPanel
+                                isDisabled={false}
+                                tooltipText={" Box's Border Color "}
+                                stateKey={"borderColor"}
+                                onInputChanged={this.props.onInputChanged}
+                                currentValue={this.props.buttonProperties.borderColor}>
+                            </ColorPanel>
                     </React.Fragment>  
                 </div>
                 <div className="ui ColorProperties FlexRow" >
