@@ -100,7 +100,6 @@ visibility: visible;
 /* Main Blocks */
 .RootDiv{
     height: 100%;
-    min-height : 100%;
     /*min-height : 100vh;
     max-height : 100vh; */
     /* min-width : 100%;
@@ -129,20 +128,20 @@ visibility: visible;
 
 .LeftUi{
     height : 100%;
-    min-height : 100%;
+    min-height : 100rem;
     min-width : 35%;
     margin : 0px 0px 0px 0px;
     padding : 0px 0px 0px 0px;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .RightUi{
     height : 100%;
-    min-height : 100%;
+    min-height : 100rem;
     min-width : 65%;
     margin : 0px 0px 0px 0px;
     padding : 0px 0px 0px 0px;
-    justify-content: space-around;
+    justify-content: flex-start;
     
 }
 
@@ -167,13 +166,37 @@ visibility: visible;
     flex-direction: row;
     flex-wrap: wrap;
     height : 100%;
-    min-height : 100%;
+    min-height : 330px;
 }
 
 .ButtonContainer{
     vertical-align: middle;
 
 }
+
+.PreviewButton:active{
+    position:relative;
+    top:1px;
+}
+
+.PreviewButton:focus{
+    outline : none;
+}
+
+.PreviewButtonCanvas{
+    height: 85%;
+    max-height : 85%;
+    min-height: 85%;
+    width : 100%;
+}
+
+.PreviewButtonSegment{
+    vertical-align: top;
+    height : 100% ;
+    min-height: 100%;
+    width : 100%;
+}
+
 
 
 /* Inside Color Menu Block */
