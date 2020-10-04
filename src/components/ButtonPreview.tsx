@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonProperties from '../Types/All';
-import './BaseStyle.css'
+import './BaseStyle.css';
+import './PreviewButton.css';
 
 
 class ButtonPreview extends React.Component< {buttonProperties : ButtonProperties} >{

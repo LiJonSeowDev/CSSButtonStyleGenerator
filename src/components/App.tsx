@@ -68,7 +68,7 @@ class App extends React.Component {
                 </div>
             </div>
           </div>
-          <div className="ui segment inverted RightUi FlexColumn" style={{ margin : "0 0 0 0"}}>
+          <div className="ui segment inverted RightUi FlexColumn" style={{margin : "0 0 0 0"}}>
             <div className="ui segment FlexColumn ColorMenu AutoOverflow">
               <div className="BlockTitle"><h2> Color Palatte </h2></div>
               <div className="ui FlexColumn FormWrapper" >
