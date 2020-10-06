@@ -1,0 +1,394 @@
+/* Generics */
+
+.FlexRoot{
+    display : flex;
+    flex-direction : row;
+}
+
+.FlexRoot > div{
+    height : 100%;
+}
+
+
+
+.bodyElem{
+    background-color: black;
+}
+
+.ZeroSpace{
+    padding : 0 0 0 0;
+    margin : 0 0 0 0;
+}
+
+.FlexRow{
+    display:flex;
+    flex-direction : row;
+}
+
+.FlexRow > div {
+    height : 100%;
+}
+
+.FlexColumn{
+    display:flex;
+    flex-direction : column;
+}
+
+.FlexColumn > div {
+    width : 100%;
+}
+
+
+.BlockTitle{
+    
+    width : 100%;
+    
+}
+
+.AutoOverflow{
+    overflow : auto;
+}
+
+.FormWrapper{
+    height : 100%;
+    margin : 0px 0px 0px 0px;
+}
+
+.InputRangedProperty{
+    height : 25%;
+    width : 100%;
+    min-width: 100%;
+}
+
+.InputRangedPropertyTitle{
+    width : 30%;
+    height : 100%;
+}
+
+.InputRangedPropertySlidersLabel{
+    min-width : 3.5em;
+    max-width : 3.5em;
+    text-align: center;
+}
+
+.InputRangedPropertySliders{
+    width : 70%;
+    height : 100%;
+}
+
+.InputRangedPropertySliders > div{
+    display: flex;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+
+.tooltip .tooltiptext { /* Tooltip text */
+visibility: hidden;
+width: 120px;
+background-color: black;
+color: #fff;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+position: absolute; /* Position the tooltip text - see examples below! */
+z-index: 1;
+}
+  
+.tooltip:hover .tooltiptext { /* Show the tooltip text when you mouse over the tooltip container */
+visibility: visible;
+}
+
+
+
+/*===========*/
+/* Specifics */
+/*===========*/
+
+/* Main Blocks */
+.RootDiv{
+    height: 100%;
+    /*min-height : 100vh;
+    max-height : 100vh; */
+    /* min-width : 100%;
+    max-width: 100%;
+    width : 100%; */
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+    background-color : black;
+}
+.PageTitle{
+    width : 100%;
+    text-align: center;
+    background-color : black;
+    color : white;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+}
+
+.PageBody{
+    background-color : black;
+    height : 95%;
+    width :100%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+}
+
+.LeftUi{
+    height : 100vh;
+    min-height : 100rem;
+    min-width : 35%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+    justify-content: flex-start;
+}
+
+.RightUi{
+    height : 100vh;
+    min-height : 100rem;
+    min-width : 65%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+    justify-content: flex-start;
+    
+}
+
+
+
+/* Inside Button Preview Block */
+.ButtonPreview{
+    height : 30%;
+}
+
+
+.BtnPreviewCanvasWrapper{
+    background-color : black;
+    height : 95%;
+    border-radius : 16px;
+}
+
+.PreviewCanvas{
+    height : 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height : 100%;
+    min-height : 330px;
+}
+
+.ButtonContainer{
+    vertical-align: middle;
+
+}
+
+.PreviewButton:active{
+    position:relative;
+    top:1px;
+}
+
+.PreviewButton:focus{
+    outline : none;
+}
+
+.PreviewButtonCanvas{
+    height: 85%;
+    max-height : 85%;
+    min-height: 85%;
+    width : 100%;
+}
+
+.PreviewButtonSegment{
+    vertical-align: top;
+    height : 100% ;
+    min-height: 100%;
+    width : 100%;
+}
+
+
+
+/* Inside Color Menu Block */
+
+.ColorMenu{
+    height : 32.5%;
+}
+
+.ColorPalatte{
+    height : 65%;
+}
+
+.PalatteTray{
+    width : 100%;
+    min-height : 100%;
+    max-height : 100%;
+}
+
+.PalatteColor{
+    max-width : 100%;
+    min-width : 100%;
+    max-height : 100%;
+    min-height : 100%;
+}
+
+.ColorProperties{
+    height : 30%;
+    margin : 0px 0px 0px 0px;
+    padding : 0.5em 0px 0px 0px;
+}
+
+.ColorPropertyTray{
+    height: 100%;
+    width : 50%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+}
+
+.ColorPropertyTray > div {
+    vertical-align : center;
+}
+
+.ColorMetaPropertyTray{
+    height: 100%;
+    width : 50%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+}
+
+.PalattePanel{
+    height : 100%;
+    max-height : 100%;
+}
+
+.PalatteColorPanel{
+    height : 128px;
+    max-height : 128px;
+}
+
+.FrozenLabel{
+    min-height : 35%;
+    height : 35%;
+    max-height : 35%;
+}
+
+
+
+/* Inside Text Menu Block */
+.TextMenu{
+    height : 32.5%;
+}
+
+.TextFreeValueMenu{
+    height : 45%;
+    width : 100%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+}
+
+.TextFreeValueMenu > div{
+    max-width : 50%;
+    padding : 0.5em 0px 0.5em 0px;
+}
+
+.TextRangeMenu{
+    height : 55%;
+    width : 100%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+}
+
+
+
+
+
+/* Inside Shape Form Block */
+.ShapeMenu{
+    height : 35%;
+}
+
+
+
+
+
+/* Inside CSS Block */
+.CSSCodeBlock{
+    height : 70%;
+}
+
+.CSSPropertyBlock{
+    height : 10%;
+    margin : 0px 0px 0px 0px;
+    padding : 0px 0px 0px 0px;
+}
+
+.CSSCodeBlock{
+    border-radius : 8px;
+    height : 90%;
+    max-width : 100%;
+    overflow : auto;
+    background-color : #232323; /* has to be in JS for some reason */
+}
+
+.CSSCodeBlock::-webkit-scrollbar {
+    width: thin;
+  }
+.CSSCodeBlock::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(41, 98, 121, 0.3);
+    background: rgb(88, 88, 88);
+  }
+
+.CSSCodeBlock::-webkit-scrollbar-thumb {
+    background-color: rgba(188, 188, 188, 255);
+    border-radius: 6px;
+    border: 1px solid rgba(33, 33, 98, 255);
+}
+
+.CSSCodeBlock::-webkit-scrollbar-corner{
+    background-color: rgb(88, 88, 88);
+    border-radius: 0px 0px 12px 0px;
+    border: 0 0 1px 0 solid rgba(33, 33, 125, 255);
+}
+
+.IconFader{
+    opacity: 1;
+}
+
+.IconFader{
+    opacity: 0;
+    -webkit-transition: opacity 1s linear;
+}
+
+@media screen and (max-width: 600px){
+
+    .FlexRoot{
+        display : flex;
+        flex-direction : column-reverse;
+    }
+
+    .FlexRoot > div{
+        width : 100%;
+    }
+
+    .LeftUi{
+        height : 100vh;
+        min-height : 100%;
+        min-width : 35%;
+        margin : 0px 0px 0px 0px;
+        padding : 0px 0px 0px 0px;
+        justify-content: flex-start;
+    }
+    
+    .RightUi{
+        height : 100vh;
+        min-height : 100%;
+        min-width : 65%;
+        margin : 0px 0px 0px 0px;
+        padding : 0px 0px 0px 0px;
+        justify-content: flex-start;
+        
+    }
+
+}
