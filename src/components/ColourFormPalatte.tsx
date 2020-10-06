@@ -1,6 +1,5 @@
 import React from 'react';
 import ColorPanel from './ColorPanel';
-import './BaseStyle.css';
 import ButtonProperties from '../Types/All';
 
 class ColourFormPalatte extends React.Component<{onInputChanged : Function, buttonProperties : ButtonProperties}> {

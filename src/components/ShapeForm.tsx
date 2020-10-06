@@ -1,7 +1,6 @@
 import React from 'react';
 import RangeSlider from './RangeSlider';
 import ButtonProperties from '../Types/All';
-import './BaseStyle.css';
 
 class ShapeForm extends React.Component<{onInputChanged : Function, buttonProperties : ButtonProperties}>{
     render(){

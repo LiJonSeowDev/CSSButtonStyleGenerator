@@ -1,4 +1,25 @@
 /* Generics */
+
+@media only screen and (max-width : 600px){
+    .FlexRoot{
+        display : flex;
+        flex-direction : column;
+    }
+
+    .FlexRoot > div{
+        width : 100%;
+    }
+}
+
+.FlexRoot{
+    display : flex;
+    flex-direction : row;
+}
+
+.FlexRoot > div{
+    height : 100%;
+}
+
 .bodyElem{
     background-color: black;
 }
@@ -127,7 +148,7 @@ visibility: visible;
 }
 
 .LeftUi{
-    height : 100%;
+    height : 100vh;
     min-height : 100rem;
     min-width : 35%;
     margin : 0px 0px 0px 0px;
@@ -136,7 +157,7 @@ visibility: visible;
 }
 
 .RightUi{
-    height : 100%;
+    height : 100vh;
     min-height : 100rem;
     min-width : 65%;
     margin : 0px 0px 0px 0px;

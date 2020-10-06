@@ -2,7 +2,6 @@ import React from 'react';
 import ButtonProperties from '../Types/All';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { railscasts } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import './BaseStyle.css';
 
 
 class CSSCodeClip extends React.Component< {buttonProperties : ButtonProperties , onInputChanged : Function} >{

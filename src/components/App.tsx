@@ -6,7 +6,6 @@ import ColourFormPalatte from './ColourFormPalatte';
 import TextForm from './TextForm';
 import ShapeForm from './ShapeForm';
 
-import './BaseStyle.css';
 
 class App extends React.Component {
   state : ButtonProperties = {
@@ -53,7 +52,7 @@ class App extends React.Component {
     return (
     <div className="RootDiv FlexColumn">
       <div className="PageTitle"><h1> CSS Button Styler</h1></div>
-        <div className="PageBody FlexRow">
+        <div className="PageBody FlexRoot">
           <div className="ui segment inverted LeftUi FlexColumn">
             <div className="ui segment FlexColumn ButtonPreview AutoOverflow">
               <div className="BlockTitle"><h2> Button Preview </h2></div>
